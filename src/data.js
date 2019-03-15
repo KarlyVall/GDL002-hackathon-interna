@@ -52,6 +52,7 @@ async function main() {
   const antMan = filterAntMan(movies);
   // document.getElementById("no").addEventListener("click", printMovies(movies));
 }
+
 //Function to add the URL links of the youtube trailers to each movie object
 function addLinks(movies, movieTrailers){
   for(let i = 0; i < movies.length; i++){
@@ -62,7 +63,7 @@ function addLinks(movies, movieTrailers){
 
 //Función que sirve para imprimir data
 function printMovies (movies){;
-  const div = document.getElementById('root');
+  let div = document.getElementById('root');
   div.innerHTML = " ";
 
   movies.map((movies) => {
@@ -99,12 +100,6 @@ $(document).on('click', '.video_content', function (event) {
      'frameborder': 0
    }));
 });
-
-// $(document).ready(function () {
-//   //is_touch_device see -> http://stackoverflow.com/a/15691248/1815624
-//    var is_touch_device = ("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch;
-//    $('[data-toggle="popover"]').popover({ html : true, trigger: is_touch_device ? "focus" : "hover focus"});
-// });
 
 function filterThor(movies){
   const thor = [];

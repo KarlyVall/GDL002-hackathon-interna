@@ -11,7 +11,11 @@ body {
 }
 
 .title{
- height: 9rem;
+  height: 9rem;
+  padding: 0.31rem;
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
 }
 
 .footer_content{
@@ -25,14 +29,6 @@ body {
   height: 2rem;
   text-align: center;
   z-index: 1;
-}
-
-.head{
-  padding: 0.31rem;
-  margin: 0 auto;
-  text-align: center;
-  list-style: none;
-  vertical-align: middle;
 }
 
 .head_menu{
@@ -49,13 +45,23 @@ body {
   vertical-align: middle;
 }
 
+.share{
+  text-decoration: none;
+}
+
 .nav1{
   background-color: rgba(237, 29, 36, 0.411);
 }
 
 .head_content, .icon_color{
-    color: white;
-    font-size: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.head_content:hover{
+  transition: 0.7s;
+  font-size: 2rem;
 }
 
 .flex_style{
@@ -63,17 +69,22 @@ body {
 }
 
 .home{
-    width: 15.62rem;
-    display: flex;
-    margin-top: 0;
+  width: 15.62rem;
+  display: flex;
+  margin-top: 0;
 }
 .home:hover{
-    width: 17rem;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .letter_style{
   margin-top: 2rem;
-  margin-left: 10rem;
+  margin-left: 11rem;
+}
+
+.margin_button{
+  margin-left: 1rem;
 }
 
 h3 {
@@ -143,22 +154,22 @@ h3 {
 }
 
 .container{
-    display: block;
-    justify-content: right;
-    height: 100%;
+  display: block;
+  justify-content: right;
+  height: 100%;
 }
 
-.img_content, .irc_mi{
-    display: block;
-    max-width: 100%;
-    margin: auto;
-    height: auto;
-    width: 25rem;
-    margin-top: 4rem;
+.img_content, .mcuGif{
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  height: auto;
+  width: 25rem;
+  margin-top: 4rem;
 }
 .button{
   background: red;
-  width: 15rem;
+  width: 13rem;
   -webkit-border-radius: 1.75rem;
   -moz-border-radius: 1.75rem;
   border-radius: 1.75rem;
@@ -195,47 +206,111 @@ h3 {
   display:inline-block;
 }
 
-.button-yes{
+.buttons{
   text-align: center;
 }
 
-.quest{
+.topHeaders{
   color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .background_marvel{
   float:right;
   max-width: 50%;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: -2;
 }
 
-.irc_mi{
+.mcuGif{
   max-width: 28rem;
   height: 15rem;
 }
-.info_content{
+
+.welcomeQuestion{
   color: white;
-  font-size: 1.2rem;
-  text-align: justify;
+  font-size: 1.5rem;
+  text-align: center;
   margin: 2rem;
 }
 
+.infoAboutUs{
+  font-size: 2.4rem;
+  color:#ffffff;
+  text-align: center;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+  display: none;
+}
+
+.title_about{
+  text-align: center;
+}
+
+.infoAboutUs:hover{
+  color: red;
+  transition: 0.7s;
+}
+
+.infoAboutUs1, .infoAboutUs2{
+  font-size: 2rem;
+  color:#ffffff;
+  text-align: justify;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.infoFeel{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.7rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.infoFeel:hover{
+  color: #0a4bc4;
+  transition: 0.5s;
+}
+
+.text{
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.text:hover{
+  font-size: 2.1rem;
+  color: #c02323;
+  transition: 0.5s;
+}
+
+.heroes {
+  display: none;
+  text-align: center;
+}
+
+.characters {
+  height: 30rem;
+}
+
+.characters img {
+  height: 15rem;
+  display: inline-block;
+  margin: 2rem;
+  cursor: pointer;
+}
+
  /*-----Main------*/
- p,
- span {
+ p, span {
   font-size: 1.2em;
  }
 
 .video_content{
- display: block;
- height: 100%;
- width: 100%;
- text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
 }
 
 .modal_container{
@@ -259,6 +334,7 @@ h3 {
   display: block;
   border-width: 15px;
   border-color: whitesmoke;
+  text-align: right;
 }
 
 #modal_video:target{
@@ -273,6 +349,7 @@ h3 {
 .history{
   display: none;
   padding: 2rem;
+  text-align: center;
 }
 
 .modal{
@@ -318,4 +395,44 @@ h3 {
    left: 0;
    top: 0;
    background-color: white;
+}
+
+@media screen and (max-width: 64rem) and (min-width: 48.75rem){
+  .title, .nav1{
+    height: 7rem;
+  }
+  .home {
+    margin-top: -1rem;
+  }
+  .letter_style{
+    margin-left: 4rem;
+  }
+  .yes, .no {
+    margin-left: 14.5rem;
+  }
+}
+
+@media screen and (max-width: 48.75rem) and (min-width: 30rem){
+  .title, .nav1{
+    height: 6rem;
+  }
+  .home {
+    width: 13rem;
+    margin-top: -1rem;
+  }
+  .letter_style{
+    margin-left: 2rem;
+  }
+  .head_content{
+    font-size: 1rem;
+  }
+  .yes, .no {
+    margin-left: 9rem;
+  }
+  .head_content:hover{
+    font-size: 1.3rem;
+  }
+  .infoAboutUs1, .infoAboutUs2{
+    font-size: 1.5rem;
+  }
 }

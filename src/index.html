@@ -14,66 +14,85 @@
   <body>
     <!--Header section-->
     <header id="title" class="title">
-      <div class="head">
-        <nav id="nav1" class="nav1">
-          <ul class="head_menu">
-            <li class="flex_style">
-              <img src="../images/Infinity_Marvel.png" alt="home" class="home">
-            </li>
-            <li class="flex_style letter_style">
-              <span class="head_content">About us</span>
-            </li>
-            <li class="flex_style letter_style">
-              <span class="head_content">Share if you like the page: </span>
-              <span class="icon-facebook icon_color margin_button"></span>
-              <span class="icon-twitter icon_color margin_button"></span>
-              <span class="icon-instagram icon_color margin_button"></span>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav id="nav1" class="nav1">
+        <ul class="head_menu">
+          <li class="flex_style">
+            <img src="../images/Infinity_Marvel.png" alt="home" id="home" class="home">
+          </li>
+          <li class="flex_style letter_style">
+            <span id="about_us" class="head_content">About us</span>
+          </li>
+          <li class="flex_style letter_style">
+            <span class="head_content">Share if you like the page: </span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/TioMarvelpeliculas/" target="_blank" class="share"><span class="icon-facebook icon_color margin_button"></span></a>
+            <a href="https://twitter.com/home?status=%40Marvel%0A" target="_blank" class="share"><span class="icon-twitter icon_color margin_button"></span></a>
+            <a href="https://plus.google.com/share?url=https%3A//www.instagram.com/Marvel/?hl=es-la" target="_blank" class="share"><span class="icon-instagram icon_color margin_button"></span></a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Section for the question buttons -->
-    <section class="buttons-characters-universe" id="button_options">
-        <h2 class="quest">Welcome! Are you familiar with the Marvel Cinematic Universe(MCU)?</h2>
-        <img class="irc_mi" src="https://media1.tenor.com/images/a197210a323e13f57eb9c86b1709f25f/tenor.gif">
-        <div class="button-yes">
-            <button class="button" type="submit">Superheroes</button>
-            <div class="divider"></div>
-            <button class="button" id="no" type="submit">History</button>
+    <!-- Starting screen section -->
+    <section class="welcome_content" id="welcome_content">
+        <h2 class="topHeaders">Welcome!</h2>
+        <img class="mcuGif" src="https://media1.tenor.com/images/a197210a323e13f57eb9c86b1709f25f/tenor.gif">
+        <p class="text">How would you like to meet the Marvel Universe?</p>
+        <div class="buttons">
+          <button id="heroes" class="button" type="submit">Heroes</button>
+          <div class="divider"></div>
+          <button id="history" class="button" type="submit">History</button>
         </div>
+        <img src="../images/background_marvel.png" alt="background" class="background_marvel"></img>
     </section>
+
     <!-- Section for the marvel universe information, displays the movie list -->
     <section id="marvel_universe" class="history">
-      <div class="marvel_universe">
-        <h2 class="quest">What is the MCU?</h2>
-        <!-- <img class="irc_mi" src="https://media1.tenor.com/images/a197210a323e13f57eb9c86b1709f25f/tenor.gif" onload="typeof google==='object'&amp; &amp;google.aft&amp; &amp;google.aft(this)"> -->
-        <p class="info_content"> El universo Marvel se ha vuelto un tanto popular por sus adaptaciones
-          cinematogràficas, sin embargo la leyenda comenzó desde hace más de 30 años y los cómics tienen
-          diferencias a lo que vemos en la pantalla grande. <br> Marvel ha creado múltiples historias y universos
-          paralelos a su historia más popular, conocida como Tierra-616 y en el aparecen los personajes que la mayoría
-          conoce: Capitán América, Spider-Man, Iron Man, Dr. Strange, Daredevil, Thor, Hulk, Los 4 fantásticos,
-          Nick Fury (director de SHIELD), los X-Men y así como los Avengers.</p>
-        <p class="info_content">Para entender mejor este universo te ponemos la cronología de tiempo con las películas
-          para que puedas entender el desarrollo de este mundo cinematográfico.</p>
+      <h2 class="topHeaders">History about MCU</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/peOWYBGuUFs?start=26" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+      <p class="text"> Here you will find the chronology of every Marvel movies</p>
+
+      <!-- Div in which we paste all the movie formats generated in data.js -->
+      <div class="root" id="root"></div>
+
+      <!-- Trailer Video Modal -->
+      <div id="modal_video" class="modal_container">
+        <div id="container_video" class="container_video">
+          <a  href="#marvel_universe" class="color_button"><span class="icon-squared-cross"></span></a>
+          <div class="scale-media" id="trailer-video-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="marvel_heroes" class="heroes">
+      <h2 class="topHeaders">MCU characters</h2>
+      <p class="text">Click on a character to see the list of movies filtered</p>
+
+      <div class="characters">
+        <img src="http://pngimg.com/uploads/captain_america/captain_america_PNG91.png" alt="">
+        <img src="http://www.pngall.com/wp-content/uploads/2016/04/Avengers-Free-Download-PNG.png" alt="">
+        <img src="http://pluspng.com/img-png/thor-hd-png-thor-png-transparent-image-790.png" alt="">
+        <img src="http://pngimg.com/uploads/ironman/ironman_PNG44.png" alt="">
+        <img src="http://www.pngmart.com/files/3/Guardians-of-The-Galaxy-PNG-Photos.png" alt="">
+        <img src="http://www.pngall.com/wp-content/uploads/2016/05/Ant-Man-Free-PNG-Image.png" alt="">
       </div>
 
-    <!-- Div in which we paste all the movie formats generated in data.js -->
-    <div class="root" id="root"></div>
-
-    <!-- Trailer Video Modal -->
-    <div id="modal_video" class="modal_container">
-        <div id="container_video" class="container_video">
-            <a  href="#marvel_universe" class="color_button"><span class="icon-squared-cross"></span></a>
-            <div class="scale-media" id="trailer-video-container"></div>
-        </div>
-    </div>
+      <!-- Div in which we paste all the movie formats generated in data.js -->
+      <div class="root" id="characterMovies"></div>
 
     </section>
 
 
-    <img src="../images/background_marvel.png" alt="background" class="background_marvel"></img>
+    <!-- Section with the information from about us -->
+    <section id="aboutUsPage" class="infoAboutUs">
+        <span class="title_about"><strong>About us</strong></span>
+        <p class="infoAboutUs1">Infinity Marvel born to make sense of being a website that provides information and data of Marvel Universe.</p><br>
+        <img src="http://www.lovethisgif.com/uploaded_images/20833-Cia-Dos-Gifs-Capit-o-America.gif">
+        <p class="infoAboutUs2">We want to be a comunity where you all can watch, read and colaborate with everything that may be important to know about this Universe.</p>
+           <p class="infoFeel"><br><strong>Feel welcome to belong this comunity!</strong></p>
+        <img src="https://media1.tenor.com/images/e2aff7e167ab500a4837493b4dbd9228/tenor.gif?">
+
+    </section>
+
     <!-- <footer class="footer_content"></footer> -->
 
     <!-- Calling our javascript files for use -->
