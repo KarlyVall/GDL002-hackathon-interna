@@ -17,6 +17,13 @@ body {
   text-align: center;
   list-style: none;
 }
+.carousel-inner{
+  width: 60%;
+  height: 40%;
+  margin-left: 20%;
+  margin-right: 50%;
+  margin-top: 1.5%;
+}
 
 .footer_content{
   position: absolute;
@@ -41,7 +48,6 @@ body {
   list-style-type: none;
   padding: 0.62rem;
   margin: 0;
-  margin-bottom: 0.62rem;
   vertical-align: middle;
 }
 
@@ -60,8 +66,8 @@ body {
 }
 
 .head_content:hover{
-  transition: 0.7s;
-  font-size: 2rem;
+  transition: 1s;
+  font-size: 1.3rem;
 }
 
 .flex_style{
@@ -70,8 +76,8 @@ body {
 
 .home{
   width: 15.62rem;
-  display: flex;
-  margin-top: 0;
+ 
+
 }
 .home:hover{
   cursor: pointer;
